@@ -1,6 +1,10 @@
 const hour = document.querySelector('#hr');
 const minute = document.querySelector('#min');
 const second = document.querySelector('#sec');
+const icon = document.querySelector('.icon');
+const search = document.querySelector('.search');
+
+
 setInterval(()=>
 {
 	let d =new Date();
@@ -12,6 +16,9 @@ setInterval(()=>
 	minute.style.transform=`rotateZ(${mm}deg)`;
 	second.style.transform=`rotateZ(${ss}deg)`;
 })
+icon.onclick=function () {
+	search.classList.toggle('active')
+}
 
 		// const hr = document.querySelector('#hr');
 		// const mn = document.querySelector('#min');
